@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">HandlerThread</string>
+    <string-array name="urls">
+        <item>http://hdwpro.com/wp-content/uploads/2018/05/Top-Tiger-Close-Up.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2018/03/hd-Turtle.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2018/02/Widescreen-Dolphin.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2018/02/Beautiful-Jaguar.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2018/01/White-Polar-Bear.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2017/10/Colorful-Beautiful-Cat.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2017/09/Danger-Seahorse-Wallpaper.jpg</item>
+        <!--<item>http://hdwpro.com/wp-content/uploads/2017/09/White-Wolf-Wallpaper.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2017/08/Nice-Dog-Wallpaper.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2017/08/Top-Lion-Wallpaper.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2017/04/Brown-Morgan-Horse.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2017/02/Best-Alpaca-Wallpapers.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2017/02/Beautiful-Koala-Background.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2017/01/Beautiful-Goose-Pictures.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2016/11/Holocentrus-Rufus.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2016/10/Top-Bunny-Photo.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2016/08/Beautiful-HD-Fish-Wallpaper.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2018/02/Top-Puffin.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2018/02/Natural-Eagle.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2017/08/HD-Butterfly.png</item>
+        <item>http://hdwpro.com/wp-content/uploads/2017/03/Awesome-Bird-Wallpaper.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2016/10/Grey-Parrot-Bird.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2016/10/Orange-Eyes-Owl.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2016/04/Owl-Funny-Bird.jpeg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2018/06/HD-White-Daisy.jpg</item>
+        <item>http://hdwpro.com/wp-content/uploads/2018/05/Free-Blue-Lotus.jpg</item>-->
+    </string-array>
+</resources>

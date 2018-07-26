@@ -1,0 +1,126 @@
+package com.flexdecision.ak_lex.threadpoolexec;
+
+import android.graphics.Bitmap;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity implements UiThreadCallback {
+    // The handler for the UI thread. Used for handling messages from worker threads.
+    private UiHandler mUiHandler;
+    public static final String TAG = MainActivity.class.getSimpleName();
+
+    // A text view to show messages sent from work threads
+    private TextView mDisplayTextView;
+    private ImageView imageView;
+
+    // A thread pool manager
+    // It is a static singleton instance by design and will survive activity lifecycle
+    private CustomThreadPoolManager mCustomThreadPoolManager;
+    private RecyclerView recyclerView;
+    private RVAdapter adapter;
+    private List<String> urls = new ArrayList<>();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        for (int i=0; i<=20; i++){
+            urls.add("11");
+        }
+        recyclerView = findViewById(R.id.imageList);
+        adapter = new RVAdapter(urls);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+
+        adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        // Initialize the handler for UI thread to handle message from worker threads
+        mUiHandler = new UiHandler(Looper.getMainLooper(), imageView);
+
+
+        // get the thread pool manager instance
+        mCustomThreadPoolManager = CustomThreadPoolManager.getsInstance();
+        // CustomThreadPoolManager stores activity as a weak reference. No need to unregister.
+        mCustomThreadPoolManager.setUiThreadCallback(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    public void downloadImage(View view){
+        Log.d(TAG, "Clicked");
+        CustomCallable callable = new CustomCallable("http://hdwpro.com/wp-content/uploads/2015/12/Birds-Image.jpg");
+        callable.setCustomThreadPoolManager(mCustomThreadPoolManager);
+        mCustomThreadPoolManager.addCallable(callable);
+    }
+    // onClick handler for Send 4 Tasks button
+   /* public void send4tasksToThreadPool(View view) {
+        for(int i = 0; i < 4; i++) {
+            CustomCallable callable = new CustomCallable();
+            callable.setCustomThreadPoolManager(mCustomThreadPoolManager);
+            mCustomThreadPoolManager.addCallable(callable);
+        }
+    }
+
+    // onClick handler for Send 8 Tasks button
+    public void send8TasksToThreadPool(View view) {
+        for(int i = 0; i < 8; i++) {
+            CustomCallable callable = new CustomCallable();
+            callable.setCustomThreadPoolManager(mCustomThreadPoolManager);
+            mCustomThreadPoolManager.addCallable(callable);
+        }
+    }*/
+
+    // onClick handler for Stop All Thread button
+    public void cancelAllTasksInThreadPool(View view) {
+        mCustomThreadPoolManager.cancelAllTasks();
+    }
+
+    // onClick handler for Clear Messages button
+    public void clearDisplay(View view) {
+        mDisplayTextView.setText("");
+    }
+
+    @Override
+    public void publishToUiThread(Message message) {
+        // add the message from worker thread to UI thread's message queue
+        if(mUiHandler != null){
+            mUiHandler.sendMessage(message);
+        }
+    }
+
+    private static class UiHandler extends Handler {
+        private WeakReference<ImageView> mWeakRefDisplay;
+
+        public UiHandler(Looper looper, ImageView display) {
+            super(looper);
+            this.mWeakRefDisplay = new WeakReference<ImageView>(display);
+        }
+
+        // This method will run on UI thread
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what){
+                // Our co

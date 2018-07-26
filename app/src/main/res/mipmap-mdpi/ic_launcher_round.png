@@ -1,0 +1,56 @@
+<application>
+  <component name="ActionsCollector">
+    <counts>
+      <entry action="$Copy" count="58" />
+      <entry action="$Cut" count="2" />
+      <entry action="$Delete" count="24" />
+      <entry action="$Paste" count="41" />
+      <entry action="$SelectAll" count="3" />
+      <entry action="$Undo" count="192" />
+      <entry action="About" count="2" />
+      <entry action="Add constructor parameters" count="1" />
+      <entry action="Android Lint Quick Fixes" count="1" />
+      <entry action="Android Quick Fixes" count="2" />
+      <entry action="Android.CreateResourceDirectory" count="3" />
+      <entry action="Android.CreateSampleDataDirectory" count="1" />
+      <entry action="Android.RunAndroidAvdManager" count="2" />
+      <entry action="Android.RunAndroidSdkManager" count="6" />
+      <entry action="AndroidModularizeAction" count="1" />
+      <entry action="ChangeSignature" count="3" />
+      <entry action="CleanGradleProject" count="5" />
+      <entry action="CloseContent" count="1" />
+      <entry action="CloseProject" count="13" />
+      <entry action="CommentByBlockComment" count="34" />
+      <entry action="CommentByLineComment" count="8" />
+      <entry action="Create Class from Usage" count="1" />
+      <entry action="Create constructor matching super" count="2" />
+      <entry action="Create method from usage" count="3" />
+      <entry action="EditorBackSpace" count="1724" />
+      <entry action="EditorChooseLookupItem" count="1412" />
+      <entry action="EditorCopy" count="212" />
+      <entry action="EditorCut" count="25" />
+      <entry action="EditorDelete" count="361" />
+      <entry action="EditorDeleteLine" count="94" />
+      <entry action="EditorDown" count="1258" />
+      <entry action="EditorDuplicate" count="13" />
+      <entry action="EditorEnter" count="1010" />
+      <entry action="EditorEscape" count="141" />
+      <entry action="EditorLeft" count="1855" />
+      <entry action="EditorLeftWithSelection" count="18" />
+      <entry action="EditorLineEnd" count="634" />
+      <entry action="EditorLineEndWithSelection" count="6" />
+      <entry action="EditorLineStart" count="64" />
+      <entry action="EditorLineStartWithSelection" count="46" />
+      <entry action="EditorPaste" count="414" />
+      <entry action="EditorRight" count="754" />
+      <entry action="EditorRightWithSelection" count="15" />
+      <entry action="EditorSplitLine" count="2" />
+      <entry action="EditorTab" count="98" />
+      <entry action="EditorTextEnd" count="1" />
+      <entry action="EditorUp" count="521" />
+      <entry action="EditorUpWithSelection" count="2" />
+      <entry action="Extract string resource" count="1" />
+      <entry action="Find" count="7" />
+      <entry action="FindInPath" count="2" />
+      <entry action="FindUsages" count="2" />
+      <entry action="Generate" count="2
